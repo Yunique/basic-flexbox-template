@@ -22,3 +22,9 @@ gulp.task ('prefix', function() {
 .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(gulp.dest('build/css'));
 });
+
+// Copy html
+gulp.task('copy', function() {
+    return gulp.src('./source/index.html')
+    .pipe(gulp.dest('build/'));
+});
