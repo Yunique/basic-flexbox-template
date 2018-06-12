@@ -35,7 +35,7 @@ body {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	height: 86vh;
+	min-height: 86vh;
 }
 
 .aside {
@@ -44,9 +44,15 @@ body {
 	    -ms-flex-order: 3;
 	        order: 3;
 	-webkit-box-flex: 0;
-	-webkit-flex: 0 0 25vw;
-	    -ms-flex: 0 0 25vw;
-	        flex: 0 0 25vw;
+	-webkit-flex-grow: 0;
+	    -ms-flex-positive: 0;
+	        flex-grow: 0;
+	-webkit-flex-shrink: 0;
+	    -ms-flex-negative: 0;
+	        flex-shrink: 0;
+	-webkit-flex-basis: 25vw;
+	    -ms-flex-preferred-size: 25vw;
+	        flex-basis: 25vw;
 	background-color: rgb(0, 165, 200);
 }
 
@@ -63,20 +69,17 @@ body {
 }
 
 .contacts__header {
-	font-size: 2.3em;
-	font-family: Arial, sans-serif;
-	font-weight: normal;
+	font: normal 2.3em Arial, sans-serif;
 	color: rgb(0, 0, 0);
 	text-align: center;
 	padding-top: 40px;
 }
 
 .contacts__text {
-	font-family: Arial, sans-serif;
+	font: 1.1em Arial, sans-serif;
 	color: rgb(0, 0, 0);
 	padding: 3px 28px;
 	line-height: 1.5;
-	font-size: 1.1em;
 	letter-spacing: 0.2px;
 }
 
@@ -86,9 +89,15 @@ body {
 	    -ms-flex-order: 1;
 	        order: 1;
 	-webkit-box-flex: 0;
-	-webkit-flex: 0 0 25vw;
-	    -ms-flex: 0 0 25vw;
-	        flex: 0 0 25vw;
+	-webkit-flex-grow: 0;
+	    -ms-flex-positive: 0;
+	        flex-grow: 0;
+	-webkit-flex-shrink: 0;
+	    -ms-flex-negative: 0;
+	        flex-shrink: 0;
+	-webkit-flex-basis: 25vw;
+	    -ms-flex-preferred-size: 25vw;
+	        flex-basis: 25vw;
 	background: #00a5c8;
 }
 
@@ -187,6 +196,7 @@ body {
 		-webkit-flex-flow: column;
 		    -ms-flex-flow: column;
 		        flex-flow: column;
+		height: initial;
 	}
 
 	.aside {
@@ -195,10 +205,9 @@ body {
 		    -ms-flex-order: 0;
 		        order: 0;
 		width: auto;
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 0 16vw;
-		    -ms-flex: 0 0 16vw;
-		        flex: 0 0 16vw;
+		-webkit-flex-basis: 16vw;
+		    -ms-flex-preferred-size: 16vw;
+		        flex-basis: 16vw;
 
 	}
 
@@ -208,10 +217,6 @@ body {
 		    -ms-flex-order: 0;
 		        order: 0;
 		width: auto;
-		-webkit-box-flex: 1;
-		-webkit-flex: 1;
-		    -ms-flex: 1;
-		        flex: 1;
 	}
 
 	.contacts__header {
@@ -248,10 +253,9 @@ body {
 		    -ms-flex-order: 0;
 		        order: 0;
 		width: auto;
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 0 33vh;
-		    -ms-flex: 0 0 33vh;
-		        flex: 0 0 33vh;
+		-webkit-flex-basis: 33vh;
+		    -ms-flex-preferred-size: 33vh;
+		        flex-basis: 33vh;
 	}
 
 	.nav__menu-title {
@@ -264,11 +268,11 @@ body {
 	}
 
 	.nav__phone {
-		margin: 10px 0 0 -3px;
+		margin-left: -3px;
 	}
 
 	.nav__vk {
-		margin: 7px 0 0 -4px;
+		margin-left: -4px;
 		letter-spacing: 0.01em;
 	}
 
